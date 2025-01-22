@@ -4,10 +4,34 @@ This project demonstrates a basic Hardhat use case. It comes with a sample contr
 
 Try running some of the following tasks:
 
+for compile contracts
 ```shell
-npx hardhat help
+npx hardhat compile
+```
+
+for unit test
+```shell
 npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat ignition deploy ./ignition/modules/Lock.js
+```
+## Deployment
+
+for deploy contract on Sepolia
+```shell
+npx hardhat ignition deploy ./ignition/modules/Token.js --network sepolia
+```
+
+for deploy contract on Mainnet Ethereum
+```shell
+npx hardhat ignition deploy ./ignition/modules/Token.js --network mainnetETH
+```
+
+## Verify
+for verfiy contract on Sepolia
+```shell
+npx hardhat ignition deploy ./ignition/modules/Token.js --network sepolia --verify
+```
+
+for verfiy contract on Mainnet Ethereum
+```shell
+npx hardhat ignition deploy ./ignition/modules/Token.js --network mainnetETH --verify
 ```
